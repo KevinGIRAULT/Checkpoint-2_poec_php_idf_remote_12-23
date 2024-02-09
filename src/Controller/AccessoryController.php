@@ -20,6 +20,8 @@ class AccessoryController extends AbstractController
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             //TODO Add your code here to create a new accessory
+            $imageName = $_POST['name'];
+            $imageUrl = $_POST['url'];
             header('Location:/accessory/list');
         }
         return $this->twig->render('Accessory/add.html.twig');
